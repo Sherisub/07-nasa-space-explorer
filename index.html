@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NASA Space Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <header class="site-header">
+      <img src="img/Nasa3.jpg" alt="NASA Logo" class="logo" />
+      <h1>NASA Space Explorer</h1>
+      <p id="fact" class="space-fact">Did you know? Space is completely silent.</p>
+    </header>
+
+    <!-- DATE FILTERS -->
+    <section class="filters">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" />
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" />
+      <button id="fetchBtn">Get Space Images</button>
+    </section>
+
+    <!-- LOADING MESSAGE -->
+    <div id="loading" class="loading-message hidden">Loading space images...</div>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+      <!-- Gallery cards will be inserted here dynamically -->
+    </section>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close-button">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDate"></p>
+      <img id="modalImage" src="" alt="Space Image" />
+      <p id="modalExplanation"></p>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/dateRange.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
